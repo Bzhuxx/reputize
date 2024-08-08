@@ -1,0 +1,908 @@
+/* ============обнуление=================== */
+html {
+	box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+input {
+	outline: none;
+}
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+button {
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	cursor: pointer;
+}
+body {
+	font-family: "arial";
+	color: #101820;
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+.button {
+	border-radius: 40px;
+	background-color: #f8f8f8;
+	padding: 6px 13px;
+	font-size: 11px;
+	transition: all 0.3s ease 0s;
+}
+.button:hover {
+	background-color: #b6b6b6;
+}
+.button:active {
+	background-color: #101820;
+	color: #fff;
+}
+
+.active {
+	background-color: #101820;
+	color: #fff;
+}
+.btn {
+	margin-right: 5px;
+}
+label {
+	margin-left: 15px;
+}
+.airdatepicker {
+	color: #101820;
+	font-size: 11px;
+	line-height: 181.818%;
+	background-color: #fff;
+	border: none;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	align-items: center;
+	transition: all 0.3s ease 0s;
+}
+
+/* для элемента input c type="radio" */
+.custom-radio {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+/* для элемента label связанного с .custom-radio */
+.custom-radio + label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+}
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio + label::before {
+	content: "";
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	border: 1px solid #000;
+	border-radius: 50%;
+	margin-right: 0.5em;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50% 50%;
+	transition: all 0.3s ease 0s;
+}
+/* стили при наведении курсора на радио */
+.custom-radio:not(:disabled):not(:checked) + label:hover::before {
+	border-color: #00000079;
+}
+/* стили для активной радиокнопки (при нажатии на неё) */
+.custom-radio:not(:disabled):active + label::before {
+	background-color: #000;
+}
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+.custom-radio:focus:not(:checked) + label::before {
+	border-color: #000;
+}
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio:checked + label::before {
+	background-color: #000;
+}
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.custom-radio:disabled + label::before {
+	background-color: #00000033;
+}
+/* ============Основные-стили=================== */
+
+/* ============reviews=================== */
+
+.reviews {
+}
+.container {
+}
+.reviews__title {
+	color: #000;
+	font-size: 38px;
+	margin-bottom: 33px;
+}
+.reviews__form {
+	box-shadow: 0px 5px 17px rgba(0, 0, 0, 0.07);
+	padding: 30px 35px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 60px;
+}
+.reviews__form-radio {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.reviews__subtitle {
+	margin-bottom: 35px;
+	font-size: 11px;
+	line-height: 181.818%;
+	font-weight: 400;
+}
+
+/* =================== */
+.reviews__box {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	flex-direction: column;
+	margin-bottom: 45px;
+	height: 1400px;
+}
+.reviews__column {
+	display: inline-flex;
+	justify-content: start;
+	align-items: start;
+	flex-direction: column;
+	align-self: flex-start;
+	max-width: 400px;
+}
+.reviews__item {
+	background-color: #f8f8f8;
+	border-radius: 10px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.reviews__logo-box {
+	margin-bottom: 25px;
+	display: flex;
+	align-items: center;
+}
+.reviews__link-logo {
+	margin-right: 15px;
+}
+.reviews__link {
+}
+.reviews__link-img {
+}
+.reviews__text {
+	font-size: 12px;
+	line-height: 150%;
+	border-radius: 14px;
+	background: #fff;
+	margin-bottom: 5px;
+	padding: 10px 20px;
+	display: inline-block;
+	align-self: start;
+}
+.reviews__answer {
+	border-radius: 14px;
+	background-color: #101820;
+	padding: 8px 20px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 150%;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	max-width: 58.76%;
+	display: inline-block;
+	align-self: end;
+}
+.answer-1,
+.not-answer {
+	border-radius: 54px;
+}
+.not-answer {
+	background-color: #e0e0e0;
+	color: #101820;
+}
+.reviews__footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.reviews__stars {
+	background-color: #fff;
+	border-radius: 110px;
+	padding: 10px 15px;
+	margin-right: 7px;
+}
+.reviews__star {
+}
+.reviews__date {
+	border-radius: 110px;
+	background-color: #fff;
+	padding: 13px 15px;
+	margin-right: 31px;
+	font-size: 8px;
+}
+.reviews__button {
+	background-color: transparent;
+	border-radius: 74px;
+	padding: 10px 20px;
+	color: #ff6a39;
+	font-size: 14px;
+	line-height: 142.857%;
+	transition: all 0.3s ease 0s;
+}
+.reviews__button:hover {
+	background-color: #c5c1c1;
+}
+.reviews__button:active {
+	background-color: #fff;
+}
+
+.reviews__load-more {
+}
+.load-more {
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0px 5px 17px 0px rgba(0, 0, 0, 0.07);
+	width: 100%;
+	display: flex;
+	padding: 20.5px;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease 0s;
+	margin-bottom: 71px;
+}
+.load-more:hover {
+	background-color: #f2f1f0;
+}
+.load-more:active {
+	box-shadow: none;
+}
+.load-more__img {
+}
+.load-more__text {
+	margin-left: 10px;
+	font-size: 12px;
+}
+/* ==============analytic================ */
+.analytic {
+}
+.analytic__title {
+	margin-bottom: 36px;
+	font-size: 38px;
+}
+.analytic__box {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 18px;
+	justify-content: space-between;
+}
+
+/* ================analytic-SCHEDULE=================================== */
+
+/* ================analytic-STRIPES==================== */
+
+/* ===========analytic-AVERAGE=============== */
+
+/* ===============analytic-TOTAL======================= */
+
+/* ================ ОБЩИЕ СТИЛИ ================== */
+
+.container {
+}
+.main {
+}
+.search {
+}
+.loupe {
+}
+.input {
+}
+.button {
+}
+.radio {
+}
+.airdatepicker {
+}
+.btn-answer {
+}
+.active {
+}
+.btn-review {
+}
+.btn-view {
+}
+.grid {
+	display: flex;
+	justify-content: space-between;
+}
+.grid-item {
+	width: 30%;
+	margin: 10px;
+	float: left;
+}
+.answer-1 {
+}
+.not-answer {
+}
+.load-more {
+}
+.load-more__img {
+}
+.load-more__text {
+}
+.yandex {
+}
+.custom-radio {
+}
+
+/* =============== HEADER ======================== */
+
+.header {
+	padding-top: 42px;
+	padding-bottom: 66px;
+}
+.header__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+.header__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+.header__item {
+}
+.header__item:not(:last-child) {
+	margin-right: 63px;
+}
+.header__link {
+	transition: all 0.3s ease 0s;
+	padding: 10px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 142.857%;
+}
+.header__link:hover {
+	background: #f8f8f8;
+}
+.header__link:active {
+	background-color: #fff;
+}
+.header__img {
+	padding: 26px 42px 19px 48px;
+	background-color: #f4f4f4;
+	border-radius: 17px;
+}
+
+/* ============== REVIEWS ======================== */
+
+.reviews {
+}
+.reviews__title {
+}
+.reviews__subtitle {
+}
+.reviews__item {
+}
+.reviews__logo-box {
+}
+.reviews__link {
+}
+.reviews__link-logo {
+}
+.reviews__link-img {
+}
+.reviews__text {
+}
+.reviews__answer {
+}
+.reviews__footer {
+}
+.reviews__stars {
+}
+.reviews__star {
+}
+.reviews__date {
+}
+.reviews__button {
+}
+.reviews__load-more {
+}
+
+/* =================== REVIEWS DATE ============== */
+
+.reviews__date-form {
+}
+.reviews__date-img {
+}
+.reviews__date-cam {
+}
+.reviews__date-airdatepicker {
+}
+
+/* ============== REVIEWS FORM =================== */
+
+.reviews__form {
+}
+.reviews__form-buttons {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 42px;
+	justify-content: space-between;
+}
+.reviews__form-button {
+	padding-left: 57px;
+	padding-right: 57px;
+	transition: all 0.1s ease 0s;
+	display: flex;
+	align-items: center;
+}
+.reviews__form-radio:not(:last-child) {
+	margin-bottom: 22px;
+}
+.reviews__form-search {
+	position: relative;
+	display: flex;
+}
+.reviews__form-loupe {
+	position: absolute;
+	top: 10px;
+	left: 13px;
+	z-index: 10;
+}
+.reviews__form-answer {
+	margin-right: 80px;
+}
+.reviews__form-title {
+	margin-bottom: 14px;
+}
+.reviews__form-review {
+	margin-right: 89px;
+}
+.reviews__form-view {
+	margin-right: 103px;
+}
+.reviews__form-radios {
+	display: flex;
+	flex-direction: column;
+}
+.reviews__form-radio {
+	display: flex;
+	align-items: center;
+}
+.reviews__form-input {
+	border-radius: 40px;
+	border: 1px solid #e2e2e2;
+	padding: 6px 13px;
+	padding-left: 34px;
+	font-size: 11px;
+	min-width: 274px;
+	position: relative;
+}
+.reviews__form-label {
+}
+.reviews__form-apply {
+	padding: 10px 35px;
+	border-radius: 60px;
+	background: #51ce8a;
+	color: #ffffff;
+	max-height: 38px;
+	font-size: 12px;
+	margin-left: 130px;
+	transition: all 0.3s ease 0s;
+}
+.reviews__form-apply:hover {
+	background: #308b59;
+}
+.reviews__form-apply:active {
+	background: #5bd692;
+}
+.reviews__form-date {
+	position: relative;
+}
+.reviews__form-airdatepicker {
+	border-radius: 40px;
+	background-color: #f8f8f8;
+	font-size: 11px;
+	padding: 6px 0;
+	padding-left: 62px;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+}
+.reviews__form-airdatepicker:hover {
+	background-color: #b6b6b6;
+}
+.reviews__form-img {
+	top: 8px;
+	left: 40px;
+	position: absolute;
+}
+.reviews__form-calendar {
+	transition: all 0.3s ease 0s;
+}
+.reviews__form-button.button:active .reviews__form-calendar {
+	fill: #fff;
+}
+input[type="radio"] {
+	margin: 0;
+}
+
+/* ================ ANALYTIC ===================== */
+
+.analytic {
+}
+.analytic__title {
+}
+.analytic__box {
+}
+.analytic__download-button {
+	padding: 24px 30px;
+	margin-left: 100px;
+	border-radius: 10px;
+	background-color: #51ce8a;
+	color: #fff;
+	align-self: end;
+	text-align: left;
+	transition: all 0.3s ease 0s;
+}
+.analytic__download-button {
+}
+.analytic__download-image {
+	margin-bottom: 20px;
+}
+.analytic__download-text {
+}
+.analytic__download-button:hover {
+	background: #308b59;
+}
+.analytic__download-button:active {
+	background: #5bd692;
+}
+.analytic__schedule {
+	flex: 0 0 100%;
+	background-color: #f8f8f8;
+	border-radius: 10px;
+	padding: 30px 56px 30px 35px;
+	display: flex;
+	align-items: start;
+}
+.analytic__diagram-box {
+	flex: 0 0 53.667%;
+}
+.analytic__diagram {
+}
+.analytic__diagram-title {
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 133.333%;
+	margin-bottom: 20px;
+}
+
+/* =============== ANALYTIC FILTER =============== */
+
+.analytic__filter {
+	position: relative;
+	padding-left: 40px;
+}
+.analytic__filter::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 100%;
+	border-left: dotted 1px #000;
+	flex: 0 0 46.333%;
+}
+.analytic__filter-title {
+	margin-bottom: 20px;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 133.333%;
+}
+.analytic__filter-date {
+}
+.analytic__filter-form {
+}
+.analytic__filter-airdatepicker {
+	position: relative;
+	background-color: #fff;
+	padding: 14px 23px 12px 55px;
+	border-radius: 60px;
+	margin-bottom: 30px;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+}
+.analytic__filter-airdatepicker:hover {
+	background-color: #b6b6b6;
+}
+.analytic__filter-airdatepicker:active {
+	background-color: #101820;
+	color: #fff;
+}
+.analytic__filter-airdatepicker:active .reviews__date-cam {
+	fill: #fff;
+}
+.analytic__filter-img {
+	position: absolute;
+	z-index: 10;
+	margin-top: 12px;
+	margin-left: 20px;
+}
+.analytic__filter-text {
+	margin: 0 3px;
+}
+.analytic__filter-buttons {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: start;
+	gap: 6px 30px;
+	max-height: 185px;
+}
+.analytic__filter-button {
+	border-radius: 40px;
+	background: #fff;
+	padding: 6px 13px;
+	transition: all 0.3s ease 0s;
+}
+.analytic__filter-button.add {
+	background-color: #101820;
+	color: #fff;
+}
+
+/* ================ ANALYTIC STRIPES ============= */
+
+.analytic__stripes {
+	background-color: #f8f8f8;
+	border-radius: 10px;
+	padding: 30px 56px 30px 35px;
+	width: 52.5%;
+}
+.analytic__stripes-title {
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 133.333%;
+	margin-bottom: 40px;
+}
+.analytic__stripes-body {
+}
+.analytic__stripes-item {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+.analytic__stripes-item:nth-child(1) .analytic__stripes-line {
+	width: 85%;
+}
+.analytic__stripes-item:nth-child(2) .analytic__stripes-line {
+	width: 75%;
+}
+.analytic__stripes-item:nth-child(3) .analytic__stripes-line {
+	width: 60%;
+}
+.analytic__stripes-item:nth-child(4) .analytic__stripes-line {
+	width: 30%;
+}
+.analytic__stripes-item:nth-child(5) .analytic__stripes-line {
+	width: 50%;
+}
+.analytic__stripes-item:nth-child(6) .analytic__stripes-line {
+	width: 30%;
+}
+.analytic__stripes-item:nth-child(7) .analytic__stripes-line {
+	width: 60%;
+}
+.analytic__stripes-item:nth-child(8) .analytic__stripes-line {
+	width: 50%;
+}
+.analytic__stripes-item:nth-child(9) .analytic__stripes-line {
+	width: 60%;
+}
+.analytic__stripes-link {
+}
+.yandex {
+	margin-left: 5px;
+	margin-right: 3px;
+}
+.analytic__stripes-image {
+}
+.analytic__stripes-dotte {
+	border-bottom: dotted 1px #000;
+	width: 100%;
+	margin-left: 25px;
+	position: relative;
+}
+.analytic__stripes-line {
+	position: absolute;
+	top: -2px;
+	border-radius: 5px;
+	left: 0;
+	height: 5px;
+	width: 85%;
+	background: linear-gradient(to left, rgba(81, 206, 138, 1), rgba(255, 106, 57, 1));
+	display: inline-block;
+}
+
+/* =========== ANALYTIC AVERAGE ================== */
+
+.analytic__average {
+	background-color: #f8f8f8;
+	border-radius: 10px;
+	padding: 30px 56px 30px 35px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 0 0 22%;
+}
+.analytic__average-text {
+}
+.analytic__average-title {
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 133.333%;
+}
+.analytic__average-subtitle {
+	font-size: 11px;
+	line-height: 181.818%;
+}
+.analytic__average-check {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 115px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+/* ================ ANALYTIC TOTAL =============== */
+
+.analytic__total {
+	background-color: #f8f8f8;
+	border-radius: 10px;
+	padding: 30px 56px 30px 35px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 0 0 22%;
+}
+.analytic__total-title {
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 133.333%;
+}
+.analytic__total-box {
+	margin-bottom: 35px;
+}
+.analytic__total-quantity {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 75px;
+	font-weight: 500;
+	line-height: 26.667%;
+	margin-bottom: 40px;
+}
+.analytic__total-lines {
+	height: 65px;
+}
+.analytic__total-item {
+	position: relative;
+	margin-bottom: 10px;
+	height: 10px;
+}
+.analytic__total-item:nth-child(1) .analytic__total-line {
+	background-color: #51ce8a;
+	width: 90%;
+}
+.analytic__total-item:nth-child(2) .analytic__total-line {
+	background-color: #eac681;
+	width: 60%;
+}
+.analytic__total-item:nth-child(3) .analytic__total-line {
+	background-color: #f19c49;
+	width: 40%;
+}
+.analytic__total-item:nth-child(4) .analytic__total-line {
+	background-color: #ff6a39;
+	width: 60%;
+}
+.analytic__total-item:nth-child(5) .analytic__total-line {
+	background-color: #3d3935;
+	width: 40%;
+}
+.analytic__total-line {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	border-radius: 5px;
+}
+
+/* =========== FOOTER ============================ */
+
+.footer {
+	padding: 42px 0px;
+}
+.footer__box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer__img {
+}
+.footer__link {
+	font-size: 14px;
+	line-height: 142.857%;
+	transition: all 0.3s ease 0s;
+	padding: 10px;
+	font-weight: 400;
+}
+.footer__link:hover {
+	background: #f8f8f8;
+}
+.footer__link:active {
+	background-color: #fff;
+}
+
+/* ============ MEDIA QUERY ====================== */
+
+@media (max-width: 1000px) {
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 768px) {
+	.container {
+		max-width: 640px;
+	}
+	.grid-item {
+		width: 45%;
+	}
+}
+
+@media (max-width: 640px) {
+	.container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media (max-width: 500px) {
+}
+
+@media (max-width: 480px) {
+	.grid-item {
+		width: 100%;
+		margin: 10px 0;
+	}
+}
+
+@media (max-width: 360px) {
+}

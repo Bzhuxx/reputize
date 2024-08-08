@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document2</title>
+	<link rel="stylesheet" href="css/air-datepicker.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__content">
+				<a href="#" class="header__logo">
+					<img class="header__logo-img" src="images/reputize.png" alt="">
+				</a>
+				<nav class="header__navigation">
+					<ul class="header__list">
+						<li class="header__item">
+							<a href="#" class="header__link">Главная страница</a>
+						</li>
+						<li class="header__item">
+							<a href="#" class="header__link">Филиалы</a>
+						</li>
+					</ul>
+				</nav>
+				<img src="images/superslime.svg" alt="" class="header__img">
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="reviews">
+			<div class="container">
+				<h2 class="reviews__title">Отзывы</h2>
+				<div class="reviews__form ">
+					<div class="reviews__form-buttons">
+						<div class="reviews__form-search">
+							<img class="reviews__form-loupe" src="./images/loupe.svg" alt="">
+							<input placeholder="Выбрать даты" type="text" class="reviews__form-input">
+						</div>
+						<div class="reviews__form-date">
+							<svg class="reviews__form-img" xmlns="http://www.w3.org/2000/svg" width="13" height="12"
+								viewBox="0 0 13 12" fill="none">
+								<path class="reviews__form-cam" fill-rule="evenodd" clip-rule="evenodd"
+									d="M3.07154 0C3.30823 0 3.50011 0.191878 3.50011 0.428571V0.857031H9.50011V0.428571C9.50011 0.191878 9.69199 0 9.92868 0C10.1654 0 10.3573 0.191878 10.3573 0.428571V0.857031H10.7857C11.7325 0.857031 12.5 1.62454 12.5 2.57132V10.2856C12.5 11.2324 11.7325 11.9999 10.7857 11.9999H2.21429C1.26751 11.9999 0.5 11.2324 0.5 10.2856V2.57132C0.5 1.62454 1.26751 0.857031 2.21429 0.857031H2.64297V0.428571C2.64297 0.191878 2.83485 0 3.07154 0ZM3.07154 1.71429L3.06166 1.71417H2.21429C1.7409 1.71417 1.35714 2.09793 1.35714 2.57132V3H11.6429V2.57132C11.6429 2.09793 11.2591 1.71417 10.7857 1.71417H9.93856L9.92868 1.71429L9.91881 1.71417H3.08142L3.07154 1.71429ZM11.6429 3.85714H1.35714V10.2856C1.35714 10.759 1.7409 11.1427 2.21429 11.1427H10.7857C11.2591 11.1427 11.6429 10.759 11.6429 10.2856V3.85714ZM8.21423 5.35711C8.21423 5.71215 7.92641 5.99997 7.57137 5.99997C7.21633 5.99997 6.92852 5.71215 6.92852 5.35711C6.92852 5.00207 7.21633 4.71426 7.57137 4.71426C7.92641 4.71426 8.21423 5.00207 8.21423 5.35711ZM9.71434 5.99997C10.0694 5.99997 10.3572 5.71215 10.3572 5.35711C10.3572 5.00207 10.0694 4.71426 9.71434 4.71426C9.3593 4.71426 9.07148 5.00207 9.07148 5.35711C9.07148 5.71215 9.3593 5.99997 9.71434 5.99997ZM8.21423 7.49989C8.21423 7.85493 7.92641 8.14275 7.57137 8.14275C7.21633 8.14275 6.92852 7.85493 6.92852 7.49989C6.92852 7.14485 7.21633 6.85703 7.57137 6.85703C7.92641 6.85703 8.21423 7.14485 8.21423 7.49989ZM9.71434 8.14275C10.0694 8.14275 10.3572 7.85493 10.3572 7.49989C10.3572 7.14485 10.0694 6.85703 9.71434 6.85703C9.3593 6.85703 9.07148 7.14485 9.07148 7.49989C9.07148 7.85493 9.3593 8.14275 9.71434 8.14275ZM3.92868 7.49989C3.92868 7.85493 3.64087 8.14275 3.28583 8.14275C2.93079 8.14275 2.64297 7.85493 2.64297 7.49989C2.64297 7.14485 2.93079 6.85703 3.28583 6.85703C3.64087 6.85703 3.92868 7.14485 3.92868 7.49989ZM5.4284 8.14275C5.78344 8.14275 6.07126 7.85493 6.07126 7.49989C6.07126 7.14485 5.78344 6.85703 5.4284 6.85703C5.07336 6.85703 4.78555 7.14485 4.78555 7.49989C4.78555 7.85493 5.07336 8.14275 5.4284 8.14275ZM3.92868 9.64286C3.92868 9.9979 3.64087 10.2857 3.28583 10.2857C2.93079 10.2857 2.64297 9.9979 2.64297 9.64286C2.64297 9.28782 2.93079 9 3.28583 9C3.64087 9 3.92868 9.28782 3.92868 9.64286ZM5.4284 10.2857C5.78344 10.2857 6.07126 9.9979 6.07126 9.64286C6.07126 9.28782 5.78344 9 5.4284 9C5.07336 9 4.78555 9.28782 4.78555 9.64286C4.78555 9.9979 5.07336 10.2857 5.4284 10.2857ZM8.21423 9.64286C8.21423 9.9979 7.92641 10.2857 7.57137 10.2857C7.21633 10.2857 6.92852 9.9979 6.92852 9.64286C6.92852 9.28782 7.21633 9 7.57137 9C7.92641 9 8.21423 9.28782 8.21423 9.64286Z"
+									fill="black" />
+							</svg>
+							<input class="reviews__form-airdatepicker airdatepicker" id="airdatepicker1" placeholder="Выбрать даты"
+								type="text">
+						</div>
+						<button class="reviews__form-button button">Имя автора</button>
+						<button class="reviews__form-button button">Сортировка</button>
+						<button class="reviews__form-button button">Источник</button>
+					</div>
+					<div class="reviews__form-radio">
+						<div class="reviews__form-answer">
+							<h5 class="reviews__form-title">Есть ответ</h5>
+							<div class="">
+								<button class=" btn-answer active button">Да</button>
+								<button class=" btn-answer button">Нет</button>
+							</div>
+						</div>
+						<div class="reviews__form-review">
+							<h5 class="reviews__form-title">Есть текст отзыва</h5>
+							<div class="">
+								<button class="btn-review active button">Да</button>
+								<button class="btn-review button">Нет</button>
+							</div>
+						</div>
+						<div class="reviews__form-view">
+							<h5 class="reviews__form-title">Вид</h5>
+							<div class="">
+								<button class="btn-view active button">Да</button>
+								<button class="btn-view button">Нет</button>
+							</div>
+						</div>
+						<div class="reviews__form-radios">
+							<div class="reviews__form-radio">
+								<input id="radio1" value="reviews" name="radio" type="checkbox"
+									class="reviews__form-reviews custom-radio">
+								<label class="reviews__form-label" for="radio1">Отображать отзывы о всей компании</label>
+							</div>
+							<div class="reviews__form-radio">
+								<input id="radio2" value="filters" name="radio" type="checkbox"
+									class="reviews__form-reviews custom-radio">
+								<label class="reviews__form-label" for="radio2">Сохранить выбранные фильтры</label>
+							</div>
+						</div>
+						<button type="submit" class="reviews__form-apply">Применить</button>
+					</div>
+				</div>
+				<h6 class="reviews__subtitle">Показано 1 909 отзывов из 1 909 за период с 15.12.2010 по 16.06.2023</h6>
+
+				<div class=" grid" data-masonry='{" percentPosition": true,   "itemSelector": .grid-item,
+				"columnWidth":  .grid-sizer }'>
+					<div class=" grid-item">
+						<div class="reviews__item">
+							<div class="reviews__logo-box">
+								<a href="#" class="reviews__link">
+									<img src="images/2gis.png" alt="" class="reviews__link-logo">
+								</a>
+								<a href="#" class="reviews__link"><img src="images/boxArrow.svg" alt="" class="reviews__link-img"></a>
+							</div>
+							<p class="reviews__text">Константин Константинов</p>
+							<p class="reviews__text">
+								Большое спасибо доктору Степанову за его бережное отношение и профессионализм. На
+								приеме совсем не страшно, все понятно объясняют, каждый этап проговаривается Большое спасибо доктору
+								Степанову за его бережное отношение и профессионализм. На приеме совсем не страшно.
+							</p>
+							<p class="reviews__answer answer-1">
+								Ответ: 1
+							</p>
+							<div class="reviews__footer">
+								<div class="reviews__stars">
+									<img src="images/stars.png" alt="" class="reviews__star">
+								</div>
+								<div class="reviews__date">12.07.2023</div>
+								<button class="reviews__button">Ответить</button>
+							</div>
+						</div>
+					</div>
+					<div class=" grid-item">
+						<div class="reviews__item">
+							<div class="reviews__logo-box">
+								<a href="#" class="reviews__link">
+									<img src="images/reviewsLogo.png" alt="" class="reviews__link-logo">
+								</a>
+								<a href="#" class="reviews__link">
+									<img src="images/boxArrow.svg" alt="" class="reviews__link-img">
+								</a>
+							</div>
+							<p class="reviews__text">Константин Константинов</p>
+							<p class="reviews__text">
+								Большое спасибо доктору Степанову за его бережное отношение и профессионализм. На приеме совсем не
+								страшно, все понятно объясняют, каждый этап проговаривается Большое спасибо доктору.
+							</p>
+							<p class="reviews__answer not-answer">
+								Без ответов
+							</p>
+							<div class="reviews__footer">
+								<div class="reviews__stars">
+									<img src="images/stars.png" alt="" class="reviews__star">
+								</div>
+								<div class="reviews__date">12.07.2023</div>
+								<button class="reviews__button">Ответить</button>
+							</div>
+						</div>
+					</div>
+					<div class=" grid-item">
+						<div class="reviews__item">
+							<div class="reviews__logo-box">
+								<a href="#" class="reviews__link">
+									<img src="images/2gis.png" alt="" class="reviews__link-logo">
+								</a>
+								<a href="#" class="reviews__link">
+									<img src="images/boxArrow.svg" alt="" class="reviews__link-img">
+								</a>
+							</div>
+							<p class="reviews__text">Константин Константинов</p>
+							<p class="reviews__text">
+								Большое спасибо доктору Степанову за его бережное отношение и профессионализм. На
+								приеме совсем не страшно, все понятно объясняют, каждый этап проговаривается Большое спасибо доктору
+								Степанову за его бережное отношение и профессионализм. На приеме совсем не страшно.
+							</p>
+							<p class="reviews__answer">
+								Добрый день, спасибо вам, очень приятно получать обратную связь!!!
+							</p>
+							<div class="reviews__footer">
+								<div class="reviews__stars">
+									<img src="images/stars.png" alt="" class="reviews__star">
+								</div>
+								<div class="reviews__date">12.07.2023</div>
+								<button class="reviews__button">Ответить</button>
+							</div>
+						</div>
+					</div>
+					<div class=" grid-item">
+						<div class="reviews__item">
+							<div class="reviews__logo-box">
+								<a href="#" class="reviews__link">
+									<img src="images/2gis.png" alt="" class="reviews__link-logo">
+								</a>
+								<a href="#" class="reviews__link">
+									<img src="images/boxArrow.svg" alt="" class="reviews__link-img">
+								</a>
+							</div>
+							<p class="reviews__text">Константин Константинов</p>
+							<p class="reviews__text">
+								Большое спасибо доктору Степанову за его бережное отношение и профессионализм. На приеме совсем не
+								страшно, все понятно объясняют, каждый этап проговаривается Большое спасибо доктору Степанову за его
+								бережное отношение и профессионализм. На приеме совсем не страшно. Большое спасибо доктору Степанову
+								за
+								его бережное отношение и профессионализм.
+							</p>
+							<p class="reviews__answer not-answer">
+								Без ответов
+							</p>
+							<div class="reviews__footer">
+								<div class="reviews__stars">
+									<img src="images/stars.png" alt="" class="reviews__star">
+								</div>
+								<div class="reviews__date">12.07.2023</div>
+								<button class="reviews__button">Ответить</button>
+							</div>
+						</div>
+					</div>
+					<div class=" grid-item">
+						<div class="reviews__item">
+							<div class="reviews__logo-box">
+								<a href="#" class="reviews__link">
+									<img src="images/2gis.png" alt="" class="reviews__link-logo">
+								</a>
+								<a href="#" class="reviews__link">
+									<img src="images/boxArrow.svg" alt="" class="reviews__link-img">
+								</a>
+							</div>
+							<p class="reviews__text">Константин Константинов</p>
+							<p class="reviews__text">
+								Большое спасибо доктору Степанову за его бережное отношение и профессионализм. На
+								приеме совсем не страшно, все понятно объясняют, каждый этап проговаривается Большое спасибо доктору
+								Степанову за его бережное отношение и профессионализм. На приеме совсем не страшно.
+							</p>
+							<p class="reviews__answer">
+								Добрый день, спасибо вам, очень приятно получать обратную связь!!! Мы работаем для вас 😁 Берегите
+								себя
+								и
+								не забывайте о профилактике. С уважением, команда Super Smile.
+							</p>
+							<div class="reviews__footer">
+								<div class="reviews__stars">
+									<img src="images/stars.png" alt="" class="reviews__star">
+								</div>
+								<div class="reviews__date">12.07.2023</div>
+								<button class="reviews__button">Ответить</button>
+							</div>
+						</div>
+					</div>
+					<div class=" grid-item">
+						<div class="reviews__item">
+							<div class="reviews__logo-box">
+								<a href="#" class="reviews__link">
+									<img src="images/reviewsLogo.png" alt="" class="reviews__link-logo">
+								</a>
+								<a href="#" class="reviews__link">
+									<img src="images/boxArrow.svg" alt="" class="reviews__link-img">
+								</a>
+							</div>
+							<p class="reviews__text">Константин Константинов</p>
+							<p class="reviews__text">
+								Большое спасибо доктору Степанову за его бережное отношение и профессионализм. На
+								приеме совсем не страшно, все понятно объясняют, каждый этап проговаривается Большое спасибо доктору
+								Степанову за его бережное отношение и профессионализм. На приеме совсем не страшно.
+							</p>
+							<p class="reviews__answer answer-1">
+								Ответ: 1
+							</p>
+							<div class="reviews__footer">
+								<div class="reviews__stars">
+									<img src="images/stars.png" alt="" class="reviews__star">
+								</div>
+								<div class="reviews__date">12.07.2023</div>
+								<button class="reviews__button">Ответить</button>
+							</div>
+						</div>
+					</div>
+					<div class=" grid-item">
+						<div class="reviews__item">
+							<div class="reviews__logo-box">
+								<a href="#" class="reviews__link">
+									<img src="images/gis.png" alt="" class="reviews__link-logo">
+								</a>
+								<a href="#" class="reviews__link">
+									<img src="images/boxArrow.svg" alt="" class="reviews__link-img">
+								</a>
+							</div>
+							<p class="reviews__text">Константин Константинов</p>
+							<p class="reviews__text">
+								Большое спасибо доктору Степанову за его бережное отношение и профессионализм. На
+								приеме совсем не страшно, все понятно объясняют, каждый этап проговаривается Большое спасибо доктору
+								Степанову за его бережное отношение и профессионализм. На приеме совсем не страшно.
+							</p>
+							<p class="reviews__answer answer-1">
+								Ответ: 1
+							</p>
+							<div class="reviews__footer">
+								<div class="reviews__stars">
+									<img src="images/stars.png" alt="" class="reviews__star">
+								</div>
+								<div class="reviews__date">12.07.2023</div>
+								<button class="reviews__button">Ответить</button>
+							</div>
+						</div>
+					</div>
+					<div class=" grid-item">
+						<div class="reviews__item">
+							<div class="reviews__logo-box">
+								<a href="#" class="reviews__link">
+									<img src="images/gis.png" alt="" class="reviews__link-logo">
+								</a>
+								<a href="#" class="reviews__link">
+									<img src="images/boxArrow.svg" alt="" class="reviews__link-img">
+								</a>
+							</div>
+							<p class="reviews__text">Константин Константинов</p>
+							<p class="reviews__text">
+								Большое спасибо доктору Степанову за его бережное отношение и профессионализм. На
+								приеме совсем не страшно, все понятно объясняют, каждый этап проговаривается Большое спасибо доктору
+								Степанову за его бережное отношение и профессионализм. На приеме совсем не страшно.
+							</p>
+							<p class="reviews__answer">
+								Добрый день, спасибо вам, очень приятно получать обратную связь!!!
+							</p>
+							<div class="reviews__footer">
+								<div class="reviews__stars">
+									<img src="images/stars.png" alt="" class="reviews__star">
+								</div>
+								<div class="reviews__date">12.07.2023</div>
+								<button class="reviews__button">Ответить</button>
+							</div>
+						</div>
+					</div>
+					<div class=" grid-item">
+						<div class="reviews__item">
+							<div class="reviews__logo-box">
+								<a href="#" class="reviews__link">
+									<img src="images/gis.png" alt="" class="reviews__link-logo">
+								</a>
+								<a href="#" class="reviews__link">
+									<img src="images/boxArrow.svg" alt="" class="reviews__link-img">
+								</a>
+							</div>
+							<p class="reviews__text">Константин Константинов</p>
+							<p class="reviews__text">
+								Большое спасибо доктору Степанову за его бережное отношение и профессионализм. На приеме совсем не
+								страшно, все понятно объясняют, каждый этап проговаривается Большое спасибо доктору Степанову за его
+								бережное отношение и профессионализм. На приеме совсем не страшно. Большое спасибо доктору Степанову
+								за
+								его бережное отношение и профессионализм.
+							</p>
+							<p class="reviews__answer not-answer">
+								Без ответов
+							</p>
+							<div class="reviews__footer">
+								<div class="reviews__stars">
+									<img src="images/stars.png" alt="" class="reviews__star">
+								</div>
+								<div class="reviews__date">12.07.2023</div>
+								<button class="reviews__button">Ответить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="reviews__load-more load-more">
+					<img src="./images/arrow.svg" alt="" class="load-more__img">
+					<p class="load-more__text">Подгрузить еще</p>
+				</button>
+			</div>
+		</section>
+		<section class="analytic">
+			<div class='container'>
+				<h3 class="analytic__title">Aналитика</h3>
+				<div class="analytic__box">
+					<div class="analytic__schedule">
+						<div class="analytic__diagram-box">
+							<h5 class="analytic__diagram-title">Отзывы и рейтинги</h5>
+							<div>
+								<canvas class="analytic__diagram" id="myChart"></canvas>
+							</div>
+						</div>
+						<div class="analytic__filter">
+							<h5 class="analytic__filter-title">Фильтр</h5>
+							<svg class="analytic__filter-img" ы xmlns="http://www.w3.org/2000/svg" width="21" height="21"
+								viewBox="0 0 21 21" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M4.49989 0C4.9141 0 5.24989 0.335786 5.24989 0.75V1.49992H15.7499V0.75C15.7499 0.335786 16.0857 0 16.4999 0C16.9141 0 17.2499 0.335786 17.2499 0.75V1.49992H18C19.6569 1.49992 21 2.84306 21 4.49992V17.9999C21 19.6568 19.6569 20.9999 18 20.9999H3C1.34315 20.9999 0 19.6568 0 17.9999V4.49992C0 2.84306 1.34315 1.49992 3 1.49992H3.74989V0.75C3.74989 0.335786 4.08568 0 4.49989 0ZM4.49989 3L4.48872 2.99992H3C2.17157 2.99992 1.5 3.67149 1.5 4.49992V5.25H19.5V4.49992C19.5 3.67149 18.8284 2.99992 18 2.99992H16.5111L16.4999 3L16.4887 2.99992H4.51106L4.49989 3ZM19.5 6.75H1.5V17.9999C1.5 18.8283 2.17157 19.4999 3 19.4999H18C18.8284 19.4999 19.5 18.8283 19.5 17.9999V6.75ZM13.5001 9.37503C13.5001 9.99635 12.9964 10.5 12.3751 10.5C11.7537 10.5 11.2501 9.99635 11.2501 9.37503C11.2501 8.75371 11.7537 8.25003 12.3751 8.25003C12.9964 8.25003 13.5001 8.75371 13.5001 9.37503ZM16.1249 10.5C16.7463 10.5 17.2499 9.99635 17.2499 9.37503C17.2499 8.75371 16.7463 8.25003 16.1249 8.25003C15.5036 8.25003 14.9999 8.75371 14.9999 9.37503C14.9999 9.99635 15.5036 10.5 16.1249 10.5ZM13.5001 13.1249C13.5001 13.7462 12.9964 14.2499 12.3751 14.2499C11.7537 14.2499 11.2501 13.7462 11.2501 13.1249C11.2501 12.5036 11.7537 11.9999 12.3751 11.9999C12.9964 11.9999 13.5001 12.5036 13.5001 13.1249ZM16.1249 14.2499C16.7463 14.2499 17.2499 13.7462 17.2499 13.1249C17.2499 12.5036 16.7463 11.9999 16.1249 11.9999C15.5036 11.9999 14.9999 12.5036 14.9999 13.1249C14.9999 13.7462 15.5036 14.2499 16.1249 14.2499ZM5.99989 13.1249C5.99989 13.7462 5.49621 14.2499 4.87489 14.2499C4.25357 14.2499 3.74989 13.7462 3.74989 13.1249C3.74989 12.5036 4.25357 11.9999 4.87489 11.9999C5.49621 11.9999 5.99989 12.5036 5.99989 13.1249ZM8.62516 14.2499C9.24648 14.2499 9.75016 13.7462 9.75016 13.1249C9.75016 12.5036 9.24648 11.9999 8.62516 11.9999C8.00384 11.9999 7.50016 12.5036 7.50016 13.1249C7.50016 13.7462 8.00384 14.2499 8.62516 14.2499ZM5.99989 16.875C5.99989 17.4963 5.49621 18 4.87489 18C4.25357 18 3.74989 17.4963 3.74989 16.875C3.74989 16.2537 4.25357 15.75 4.87489 15.75C5.49621 15.75 5.99989 16.2537 5.99989 16.875ZM8.62516 18C9.24648 18 9.75016 17.4963 9.75016 16.875C9.75016 16.2537 9.24648 15.75 8.62516 15.75C8.00384 15.75 7.50016 16.2537 7.50016 16.875C7.50016 17.4963 8.00384 18 8.62516 18ZM13.5001 16.875C13.5001 17.4963 12.9964 18 12.3751 18C11.7537 18 11.2501 17.4963 11.2501 16.875C11.2501 16.2537 11.7537 15.75 12.3751 15.75C12.9964 15.75 13.5001 16.2537 13.5001 16.875Z"
+									fill="black" />
+							</svg>
+							<input class="analytic__filter-airdatepicker airdatepicker" id="airdatepicker"
+								placeholder="17.01.2023 - 16.06.2023" class="form-control" type="text">
+							<div class="analytic__filter-buttons">
+								<button class="analytic__filter-button button">Google maps</button>
+								<button class="analytic__filter-button button">Yell</button>
+								<button class="analytic__filter-button button">Yandex</button>
+								<button class="analytic__filter-button button">2Гис</button>
+								<button class="analytic__filter-button button">Irecommende</button>
+								<button class="analytic__filter-button button">Zoon</button>
+								<button class="analytic__filter-button button">Prodoctorov</button>
+								<button class="analytic__filter-button button">Docdoc</button>
+								<button class="analytic__filter-button button">Napopravku</button>
+							</div>
+						</div>
+						<button class="analytic__download-button">
+							<img class="analytic__download-image" src="images/cloud.svg" alt="">
+							<p class="analytic__download-text">Выгрузить данные</p>
+						</button>
+					</div>
+					<div class="analytic__stripes">
+						<h4 class="analytic__stripes-title">Отзывы и рейтинги</h4>
+						<div class="analytic__stripes-body">
+							<div class="analytic__stripes-item">
+								<a href="#" class="analytic__stripes-link">
+									<img src="images/google-smole.svg" alt="" class="analytic__stripes-image">
+								</a>
+								<div class="analytic__stripes-dotte">
+									<span class="analytic__stripes-line"></span>
+								</div>
+							</div>
+							<div class="analytic__stripes-item">
+								<a href="#" class="analytic__stripes-link yandex">
+									<img src="images/yandex.svg" alt="" class="analytic__stripes-image">
+								</a>
+								<div class="analytic__stripes-dotte">
+									<span class="analytic__stripes-line"></span>
+								</div>
+							</div>
+							<div class="analytic__stripes-item">
+								<a href="#" class="analytic__stripes-link">
+									<img src="images/Ellipse.svg" alt="" class="analytic__stripes-image">
+								</a>
+								<div class="analytic__stripes-dotte">
+									<span class="analytic__stripes-line"></span>
+								</div>
+							</div>
+							<div class="analytic__stripes-item">
+								<a href="#" class="analytic__stripes-link">
+									<img src="images/Ellipse.svg" alt="" class="analytic__stripes-image">
+								</a>
+								<div class="analytic__stripes-dotte">
+									<span class="analytic__stripes-line"></span>
+								</div>
+							</div>
+							<div class="analytic__stripes-item">
+								<a href="#" class="analytic__stripes-link">
+									<img src="images/Ellipse.svg" alt="" class="analytic__stripes-image">
+								</a>
+								<div class="analytic__stripes-dotte">
+									<span class="analytic__stripes-line"></span>
+								</div>
+							</div>
+							<div class="analytic__stripes-item">
+								<a href="#" class="analytic__stripes-link">
+									<img src="images/Ellipse.svg" alt="" class="analytic__stripes-image">
+								</a>
+								<div class="analytic__stripes-dotte">
+									<span class="analytic__stripes-line"></span>
+								</div>
+							</div>
+							<div class="analytic__stripes-item">
+								<a href="#" class="analytic__stripes-link">
+									<img src="images/Ellipse.svg" alt="" class="analytic__stripes-image">
+								</a>
+								<div class="analytic__stripes-dotte">
+									<span class="analytic__stripes-line"></span>
+								</div>
+							</div>
+							<div class="analytic__stripes-item">
+								<a href="#" class="analytic__stripes-link">
+									<img src="images/Ellipse.svg" alt="" class="analytic__stripes-image">
+								</a>
+								<div class="analytic__stripes-dotte">
+									<span class="analytic__stripes-line"></span>
+								</div>
+							</div>
+							<div class="analytic__stripes-item">
+								<a href="#" class="analytic__stripes-link">
+									<img src="images/Ellipse.svg" alt="" class="analytic__stripes-image">
+								</a>
+								<div class="analytic__stripes-dotte">
+									<span class="analytic__stripes-line"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="analytic__average">
+						<div class="analytic__average-text">
+							<h4 class="analytic__average-title">Средний рейтинг</h4>
+							<h6 class="analytic__average-subtitle">За выбранный период</h6>
+						</div>
+						<div class="analytic__average-check">4.7</div>
+					</div>
+					<div class="analytic__total">
+						<h4 class="analytic__total-title">Общее колличество отзывов</h4>
+						<div class="analytic__total-box">
+							<div class="analytic__total-quantity">
+								393
+							</div>
+							<div class="analytic__total-lines">
+								<div class="analytic__total-item">
+									<span class="analytic__total-line"></span>
+								</div>
+								<div class="analytic__total-item">
+									<span class="analytic__total-line"></span>
+								</div>
+								<div class="analytic__total-item">
+									<span class="analytic__total-line"></span>
+								</div>
+								<div class="analytic__total-item">
+									<span class="analytic__total-line"></span>
+								</div>
+								<div class="analytic__total-item">
+									<span class="analytic__total-line"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer ">
+		<div class="container">
+			<div class="footer__box">
+				<img src="images/zabota.png" alt="" class="footer__img">
+				<a href="#" class="footer__link">Главная страница</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<!-- or -->
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+		integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+		async></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="js/air-datepicker.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
